@@ -8,11 +8,10 @@ request = {
 }
 
 def process_request(request):
-    if request['action'] == 'create_application':
-        result = {"status": "success", "message": "Application created"}
-        return result
+    action = request.get('action')
+    if action == 'create_application':
+        return {"status": "success", "message": "Application created"}
     else:
-        result = {"status": "error", "message": "Unknown action"}
-        return(result)
-
+        return {"status": "error", "message": "Unknown action"}
+    
 print(process_request(request))

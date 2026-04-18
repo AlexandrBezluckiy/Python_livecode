@@ -7,6 +7,9 @@ def send_request(url):
     try:
         response_json = response.json()
     except:
+        return {'status': 'error', 'code': 'Invalid JSON'}
+
+def parse_response(response):
 
 
 

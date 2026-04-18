@@ -42,7 +42,6 @@ def process_request(json_data):
     send_response()
     return send_response()
 
-
 def send_response():
     return {
         "status": "success",
